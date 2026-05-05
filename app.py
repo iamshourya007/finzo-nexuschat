@@ -1,13 +1,15 @@
 """Streamlit UI: login, chat, sidebar, source citations."""
 import streamlit as st
-from dotenv import load_dotenv
 import os
 
 from config import USERS, ROLE_DISPLAY
 from rag_chain import RAGPipeline
 
-# Load env
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # Streamlit Cloud uses its own Secrets manager instead of .env files
 
 st.set_page_config(page_title="Finzo NexusChat", page_icon="🏦")
 
