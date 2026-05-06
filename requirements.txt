@@ -1,5 +1,5 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.11.0+cpu
+torch==2.2.2+cpu
 langchain==0.3.7
 langchain-groq==0.2.3
 langchain-community==0.3.7
